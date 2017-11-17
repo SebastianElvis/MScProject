@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{dagger}
+Daniel Larimer.
+\newblock Momentum - a memory-hard proof-of-work via finding birthday
+  collisions.
+\newblock Technical report, 2013.
+
+\bibitem{laurie2004proof}
+Ben Laurie and Richard Clayton.
+\newblock Proof-of-work proves not to work.
+\newblock 2004.
+
+\bibitem{memohash}
+Sergio~Demian Lerner.
+\newblock Strict memory hard hashing functions.
+\newblock Technical report, 2014.
+
+\bibitem{nakamoto2008bitcoin}
+Satoshi Nakamoto.
+\newblock Bitcoin: A peer-to-peer electronic cash system, 2008.
+
+\bibitem{percival2016scrypt}
+Colin Percival and Simon Josefsson.
+\newblock The scrypt password-based key derivation function.
+\newblock Technical report, 2016.
+
+\bibitem{rivest1996time}
+Ronald~L Rivest, Adi Shamir, and David~A Wagner.
+\newblock Time-lock puzzles and timed-release crypto.
+\newblock 1996.
+
+\end{thebibliography}

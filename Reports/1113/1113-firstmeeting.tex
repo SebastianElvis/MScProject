@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+%\usepackage{doublespace}
+\begin{document}
+\title{First Meeting - 11.13}
+\author{MSc Project \\
+Runchao Han \\
+%\date{Week Ending 8/29/03}
+}
+\maketitle
+%
+% This section is used to list the key action items from the
+% previous meeting. This information will help provide 
+% continuity of information and decisions made in the
+% previous meeting. 
+% Use the \item construct to list each item.  Try to keep the
+% descriptions for each down to one or two sentences
+%
+\section{Overview of the Project}
+
+The project aims at the widely used mining algorithms for cryptocurrencies. PoW based cryptocurrencies rely on mining powers to get coins, which contributes to the decentralised characteristic of digital currencies like Bitcoin. However, currently ASIC and FPGA technologies are utilised for mining, making the computing power centralised. This project is to improve state-of-the-art mining algorithms to make them obtain better performance on CPU/GPUs, while keeping them memory-consuming and non-parallelisable.
+
+The basic requirements of the imrpoved algorithms are listed below:
+\begin{enumerate}
+\item Memory-hard. The process of minting a block requires lots of memory space.
+\item Non-parallelisable. It is impossible to minimise the cost by parallelising this algorithm.
+\item Dynamic difficulty. The difficulty of minting a block can vary.
+\end{enumerate}
+%
+% This section is used to list the accomplishments of the week.
+% Use the \item construct to list each item.  Try to keep the
+% descriptions for each down to one or two sentences
+%
+\section{Methodology and Process of the Project}
+
+To make this project practical, we divide it into clearly defined steps with achievable tasks.
+
+\begin{enumerate}
+\item Survey about state-of-the-art mining algorithms:
+	\begin{itemize}
+		\item Find/collect current popular mining algorithms
+		\item Choose the mostly accepted one(s)
+		\item Acknowledge the chosen one(s)
+	\end{itemize}
+\item Collect data about the performance, electric power cost on different hardwares:
+   \begin{itemize}
+      \item Choose hardwares for implementations of algorithms on different platforms: CPU,GPU,FPGA and Memory.(No need to run ASIC version by ourselves)
+      \item Collect data
+      \item Make comparisons, including tabulating and plotting them
+   \end{itemize}
+\item Decompose the algorithms to stages with clearly defined functions and make analysis:
+   \begin{itemize}
+      \item Observe the code, including some runs/tests
+      \item Decompose the algorithm to logical stages with specific functions
+      \item Analyse them to find out possibilities of optimisations
+   \end{itemize}
+\item Implement the optimised version and make comparisons
+
+\end{enumerate}
+
+%
+% This section is used to list the unscheduled accomplishments of the week.
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Miscellaneous}
+
+\begin{itemize}
+\item Frequent and effective reports/outputs
+	\begin{itemize}
+      \item Help the supervisor learn about it
+      \item Help the student learn about it and keep the right direction
+    \end{itemize}
+\item Document every meeting/feedback and arrange them
+\item Every report should be produced by Latex
+\end{itemize}
+
+%
+% This section is used to list the following week's plan
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Next Week's Plan}
+\begin{itemize}
+\item Survey about state-of-the-art mining algorithms
+\item Read their source code if possible
+\end{itemize}
+
+%
+% This section is used to list any issues that were raised during
+% the week that are of special interest.  Also use this to voice
+% issues that the TA or Instructor must resolve.
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Related Papers}
+\begin{itemize}
+\item The scrypt password-based key derivation function. No. RFC 7914. \\
+http://www.rfc-editor.org/rfc/rfc7914.txt
+\item Scrypt is maximally memory-hard. \\
+https://eprint.iacr.org/2016/989.pdf 
+\item Dash whitepaper. \\
+https://github.com/dashpay/dash/wiki/Whitepaper
+\item Hashcash-a denial of service counter-measure. \\
+ftp://sunsite.icm.edu.pl/site/replay.old/programs/hashcash/hashcash.pdf
+\item STRICT MEMORY HARD HASHING FUNCTIONS. \\
+https://bitslog.files.wordpress.com/2013/12/memohash-v0-3.pdf
+\item Cuckoo Cycle. \\
+https://github.com/tromp/cuckoo
+\item Dagger: A Memory-Hard to Compute, Memory-Easy to Verify Scrypt Alternative. \\
+http://www.hashcash.org/papers/dagger.html
+\item MOMENTUM - A MEMORY-HARD PROOF-OF-WORK VIA FINDING BIRTHDAY COLLISIONS. \\
+http://www.hashcash.org/papers/momentum.pdf
+\end{itemize}
+
+\end{document}

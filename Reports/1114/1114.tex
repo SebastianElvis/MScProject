@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\usepackage{fullpage}
+\usepackage{hyperref}
+
+%\usepackage{doublespace}
+\begin{document}
+\title{Weekly Report - Survey On Mining Algorithms}
+\author{MSc Project \\
+Runchao Han \\
+}
+\maketitle
+%
+% This section is used to list the key action items from the
+% previous meeting. This information will help provide 
+% continuity of information and decisions made in the
+% previous meeting. 
+% Use the \item construct to list each item.  Try to keep the
+% descriptions for each down to one or two sentences
+%
+\section{Introduction}
+
+Currently Proof-of-Work (PoW) algorithm is the most popular consensus algorithm for public blockchains because of its scalability, where peers get coins by ``mining'' on the blockchain network. ``Mining'' in PoW based cryptocurrencies means to find hash values which satisfy the requirement to get the right to append a block on the blockchain. This report focuses on the first task of the MSc Project, which is to make a survey on state-of-the-art mining algorithms.
+
+\section{Background of PoW}
+
+This section introduces the theory of PoW from its cryptography basis to this probability based consensus, including Hash Functions, HashCash and PoW. In addition, its challenges and corresponding solutions are discussed.
+
+\subsection{Hash Functions}
+
+A hash function is any function that maps arbitrary size data to fixed size data. The values returned by a hash function are called hash values. An example of the the usage is a data structure called hash table, widely used in computer software for rapid data lookup. It can be expressed as: \[ H(x) = h \]
+
+\texttt{H()} is the hash function which processes an arbitary string \texttt{x} then get a fixed length string \texttt{h}.
+
+Widely used hash functions are listed below:
+
+\begin{enumerate}
+\item Secure Hash Algorithm (SHA) family, including SHA-0 to SHA-3 with different parameters.
+\item MD5 Message-Digest Algorithm
+\end{enumerate}
+
+Since hash functions are essentially many-to-one functions for footprinting strings, some requirements should be met: %http://www2.cs.man.ac.uk/~raym8/comp38411/main/node59.html
+
+\begin{enumerate}
+\item \textbf{Compression:}
+H can be applied to a block of data of any size, but produces a fixed-length output
+\item \textbf{One-way property (pre image resistant):}
+H(x) is easy to compute for any given x. For any given h, it is hard to compute x such that H(x)=h
+\item \textbf{Weak collision resistance (2nd preimage resistant):}
+Given x, it is hard to find y != x such that H(y)=H(x)
+\item \textbf{Strong collision resistance (collision resistance):}
+It is hard to find two different messages, x != y, such that H(y)=H(x)
+\end{enumerate}
+
+This \href{https://www.tools4noobs.com/online_tools/hash}{online tool} can do popular hash function calculations.
+
+\subsection{HashCash}
+
+HashCash was proposed to resist Denial of Service (DoS) Attack and spam emails. It requires a client to do a specific calculation which is hard to compute but easy to verify before invoking essential operations of the server. For example, a spam email sending machine should do this calculation every time before it sends an email, which will make the spam sending uneconomic, but not for normal individuals. 
+
+One-way functions like hash functions are suitable for implementing HashCash. For example, the server requires the client to find a value whose hash value starts with at least three zeros. Both clients and servers do not know answers at first. The client continuously generates random strings and computes hash values of them to find a valid string. Based on the random nature of hash functions, the probability of finding a valid value is fixed so that the required work of the client is also fixed.
+
+\subsection{PoW Consensus - Double SHA256 in Bitcoin as an Example}
+
+Supported by the HashCash mechanism, the consensus is obtained on a peer-to-peer (P2P), unstable and untrusted network by PoW. According to the example above, HashCash can change the difficulty simply by changing required number of 0 at the beginning of hash values. On the Bitcoin network, every node calculates HashCash values, where the difficulty is dynamic according to the total calculating power on the network. That is, if the total computing power is bigger, the difficulty will increase, which always keeps the average time to find a valid value about 10 minutes. This process is called ``Mining'' because it is similar to mine gold in a goldmine.
+
+The time of 10 minutes is an average value based on probabilitic theories which is a practical way to avoid the double spending problem. 10 minutes is enough for nodes in the whole network to receive the latest block when no other valid hash values are found.
+
+The hash function of Bitcoin's PoW is Double SHA256:
+
+\[ H(x) = SHA256(SHA256(x)) \]
+
+\subsection{Challenges of PoW - Centralisation of Computing Power}
+
+At the beginning of Bitcoin, only CPU was used for mining, then followed GPU mining because SHA256 is easy to parallelise. To mine more coins with less electric power, FPGAs and ASICs were designed, which caused the centralisation of computing power. 
+
+\subsection{Solutions}
+
+To avoid the centralisation, memory-bound and non-parallelisable algorithms are proposed,  to mitigate the performance gap between CPU/GPU and FPGA/ASIC, or even make FPGA/ASIC unavailable. Requirements for this more democrat approach are:
+
+\begin{enumerate}
+\item Memory-hard or memory-bound
+\item Non-parallelisable
+\item Hard to compute but easy to verify
+\item Dynamic difficulty
+\end{enumerate}
+
+\section{State-of-the-art Democrat PoW Algorithms}
+
+\subsection{Scrypt}
+
+\subsection{Ethash Based on DAG Generation}
+
+\subsection{Cuckoo Based on Graph Theory}
+
+\subsection{Momentum Based on Hash Birthday Collision}
+
+\subsection{MemoHash}
+
+
+
+\section{Planned Accomplishments}
+\begin{enumerate}
+\item New item: give internal deadline for deliverable.
+\item Person and Scheduled Task name:
+   \begin{itemize}
+      \item hours spent by person
+      \item description of what was done (task doesn't need to be complete)
+   \end{itemize}
+\item Scheduled Task name:
+   \begin{itemize}
+      \item hours spent by person
+      \item description of what was done (task doesn't need to be complete)
+   \end{itemize}
+\end{enumerate}
+
+%
+% This section is used to list the unscheduled accomplishments of the week.
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Other Accomplishments}
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+%
+% This section is used to list the following week's plan
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Next Week's Plan}
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+%
+% This section is used to list any issues that were raised during
+% the week that are of special interest.  Also use this to voice
+% issues that the TA or Instructor must resolve.
+% Use the \item construct to list each item.  Try to keep the
+% Descriptions for each down to one or two sentences
+%
+\section{Issues}
+\begin{itemize}
+\item
+\item
+\end{itemize}
+
+\end{document}
