@@ -88,15 +88,46 @@ To avoid the centralisation, memory-bound and non-parallelisable algorithms are 
 
 \subsection{Scrypt}
 
+
+
 \subsection{Ethash Based on DAG Generation}
+
+Ethash is a memory-bound mining algorithm resistant to ASICs\cite{ethash}. The general route that the algorithm takes is as follows:
+
+\begin{enumerate}
+\item There exists a seed which can be computed for each block in the blockchain. In other words, a seed can be computed by a specific algorithm for each block.
+\item From the seed, a 16 MB pseudorandom cache is computed. ``Light clients''(network nodes who needn't store the whole blockchain) can verify a block only by the cache.
+\item From the cache, we can generate a 1 GB dataset, with the property that each item in the dataset depends on only a small number of items from the cache. Full clients and miners store the dataset. The dataset grows linearly with time.
+\item Mining involves grabbing random slices of the dataset and hashing them together. \item Verification can be done with small memory by using the cache to regenerate the specific pieces of the dataset that you need.
+\end{enumerate}
+
+The large dataset is updated once every 30000 blocks, so the vast majority of a miner's effort will be reading the dataset, not making changes to it. The cache and the dataset can be pre-computed.
+
+The difficulty of the mining is dynamic which maintains that a new block is generated every 15 seconds.
 
 \subsection{Cuckoo Based on Graph Theory}
 
+Cuckoo is a memory bandwidth bound mining algorithm based on graph theory\cite{tromp2014cuckoo}, adopted by  \href{https://aeternity.com/}{aeternity}.
+ 
+Cuckoo Cycle aims to minimize performance-per-dollar differences on different hardware architectures and make mining on commodity hardware more cost effective. This is to be achieved by making main memory latency a bottleneck, since DRAM latencies have remained relatively stable while cpu-speed and memory bandwidth vary highly across hardware architecture and process technology. 
+
+The basic thinking is to construct a random bipartite graph with randomly chosen edges. The bipartile graph is implemented by two hashtables. A user randomly insert edges to it, until finding a cycle with the fixed length L. This process is easy to verify but hard to solve with frequent memory access.
+
 \subsection{Momentum Based on Hash Birthday Collision}
+
+Momentum is a mining algorithm based on hash function's birthday collision, adopted by \href{hhttp://memorycoin.org/}{MemoryCoin}(bankrupted). Birthday collision means two known strings have the same hash value. 
+
+Assuming a cryptographically secure hashing function $Hash(x)$ and a sequential memory-hard hash function $BirthdayHash(x)$ like \texttt{scrypt} are defined. The algorithm can be described as follows:
+
+\begin{enumerate}
+\item Given a block of data D, calculate $H=Hash(D)$
+\item Find nonce A and B such that $BirthdayHash(A+H)=BirthdayHash(B+H)$
+\item If $Hash(H+A+B)<TargetDifficulty$, then a result has been found, otherwise keep searching.
+\end{enumerate}
 
 \subsection{MemoHash}
 
-
+Memohash\cite{memohash} is a memory-hard hash function, but not a PoW function. It gave concrete definitions of a memory-hard function, as well as proposed two sequential memory hard functions \texttt{SeqMemoHash} and \texttt{RandMemoHash}.
 
 \section{Planned Accomplishments}
 \begin{enumerate}
@@ -122,6 +153,14 @@ To avoid the centralisation, memory-bound and non-parallelisable algorithms are 
 \begin{itemize}
 \item
 \item
+\end{itemize}
+
+\section{Miscellaneous}
+
+\begin{itemize}
+\item A \href{https://whattomine.com}{website} is found to check the hash rates of different cryptocurrencies with information about CPU/GPU/ASICs.
+\item 
+
 \end{itemize}
 
 %
