@@ -1,0 +1,15 @@
+\BOOKMARK [1][-]{section.1}{Progress of the Last Week}{}% 1
+\BOOKMARK [1][-]{section.2}{Imporing Ethminer to Nvidia Visual Profiler}{}% 2
+\BOOKMARK [1][-]{section.3}{CUDA Basic Principles}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{An Introduction to GPU}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{The Lifecycle of a CUDA Program}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Basic APIs}{section.3}% 6
+\BOOKMARK [3][-]{subsubsection.3.3.1}{Function Type Specifiers}{subsection.3.3}% 7
+\BOOKMARK [3][-]{subsubsection.3.3.2}{Variable Type Specifiers}{subsection.3.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.3.3}{Existing Variables}{subsection.3.3}% 9
+\BOOKMARK [2][-]{subsection.3.4}{Progammers' Perspective: Grid, Block and Thread}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.5}{Hardware's Perspective: SP, SM and Warp}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.6}{The New Shuffle APIs}{section.3}% 12
+\BOOKMARK [1][-]{section.4}{A More Detailed Profiling on Ethash \(Shuffled\)}{}% 13
+\BOOKMARK [1][-]{section.5}{Miscellaneous}{}% 14
+\BOOKMARK [1][-]{section.6}{Next Week's Plan}{}% 15

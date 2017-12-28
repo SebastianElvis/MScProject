@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{canetti2004random}
+Ran Canetti, Oded Goldreich, and Shai Halevi.
+\newblock The random oracle methodology, revisited.
+\newblock {\em Journal of the ACM (JACM)}, 51(4):557--594, 2004.
+
+\bibitem{ethash}
+Ethereum.
+\newblock Ethash.
+
+\bibitem{memohash}
+Sergio~Demian Lerner.
+\newblock Strict memory hard hashing functions.
+
+\bibitem{scrypt}
+Colin Percival and Simon Josefsson.
+\newblock The scrypt password-based key derivation function.
+\newblock Technical report, 2016.
+
+\bibitem{tromp2014cuckoo}
+John Tromp.
+\newblock Cuckoo cycle: a memory-hard proof-of-work system.
+\newblock {\em IACR Cryptology ePrint Archive}, 2014:59, 2014.
+
+\end{thebibliography}

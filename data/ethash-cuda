@@ -1,0 +1,31 @@
+ cu  20:30:10|ethminer  Using grid size 8192 , block size 128
+Benchmarking on platform: CUDA
+Preparing DAG for block #0
+Warming up...
+  ℹ  20:30:10|CUDA0     set work; seed: #00000000, target:  #000000000000
+  ℹ  20:30:10|CUDA0     Initialising miner...
+ cu  20:30:10|CUDA0     Using device: GeForce GTX 960M  (Compute 5.0)
+ cu  20:30:10|CUDA0     Generating DAG for GPU # 0
+CUDA#0: 0%
+CUDA#0: 6%
+CUDA#0: 12%
+CUDA#0: 19%
+CUDA#0: 25%
+CUDA#0: 31%
+CUDA#0: 38%
+CUDA#0: 44%
+CUDA#0: 50%
+CUDA#0: 56%
+CUDA#0: 62%
+CUDA#0: 69%
+CUDA#0: 75%
+CUDA#0: 81%
+CUDA#0: 88%
+CUDA#0: 94%
+Trial 1... 7975558
+Trial 2... 8394904
+Trial 3... 8815090
+Trial 4... 8815090
+Trial 5... 8918246
+min/mean/max: 7975558/8583777/8918246 H/s
+inner mean: 8709413 H/s

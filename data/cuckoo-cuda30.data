@@ -1,0 +1,11 @@
+Looking for 42-cycle on cuckoo30("",0) with 50% edges, 32 trims, 16384 threads 128 per block
+Using 64MB edge and 128MB node memory.
+nonce 0: 32 trims completed in 8.050 seconds final load 2%
+   4-cycle found at 0:84%
+   2-cycle found at 0:88%
+  34-cycle found at 0:92%
+  14-cycle found at 0:92%
+  26-cycle found at 0:99%
+ 118-cycle found at 0:99%
+   8-cycle found at 0:99%
+1170-cycle found at 0:99%

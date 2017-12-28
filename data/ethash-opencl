@@ -1,0 +1,43 @@
+  ℹ  20:28:28|ethminer  Found suitable OpenCL device [ GeForce GTX 960M ] with 4240965632  bytes of GPU memory
+Benchmarking on platform: CL
+Preparing DAG for block #0
+ cl  20:28:28|cl-0      No work. Pause for 3 s.
+Warming up...
+ cl  20:28:31|cl-0      New work: header #50c856ae… target 0000000000000002000000000000000000000000000000000000000000000000
+ cl  20:28:31|cl-0      New seed #00000000…
+ cl  20:28:32|cl-0      Platform: NVIDIA CUDA
+ cl  20:28:32|cl-0      Device:   GeForce GTX 960M  / OpenCL 1.2 CUDA
+ cl  20:28:32|cl-0      Build info: 
+
+ cl  20:28:32|cl-0      Creating light cache buffer, size 16776896
+ cl  20:28:32|cl-0      Creating DAG buffer, size 1073739904
+ cl  20:28:32|cl-0      Loading kernels
+ cl  20:28:32|cl-0      Writing light cache buffer
+ cl  20:28:32|cl-0      Creating buffer for header.
+ cl  20:28:32|cl-0      Creating mining buffer
+ cl  20:28:32|cl-0      Generating DAG
+ cl  20:28:33|cl-0      DAG 0 %
+ cl  20:28:33|cl-0      DAG 6 %
+ cl  20:28:34|cl-0      DAG 12 %
+ cl  20:28:35|cl-0      DAG 18 %
+ cl  20:28:36|cl-0      DAG 25 %
+ cl  20:28:37|cl-0      DAG 31 %
+ cl  20:28:38|cl-0      DAG 37 %
+ cl  20:28:39|cl-0      DAG 43 %
+ cl  20:28:40|cl-0      DAG 50 %
+ cl  20:28:41|cl-0      DAG 56 %
+ cl  20:28:41|cl-0      DAG 62 %
+ cl  20:28:42|cl-0      DAG 68 %
+Trial 1...  cl  20:28:43|cl-0      DAG 75 %
+ cl  20:28:44|cl-0      DAG 81 %
+ cl  20:28:45|cl-0      DAG 87 %
+0
+Trial 2...  cl  20:28:46|cl-0      DAG 93 %
+ cl  20:28:46|cl-0      Switch time 18002 ms / 15002299 us
+8394204
+Trial 3... 8394204
+Trial 4... 8276697
+Trial 5... 8182165
+  ✘  20:28:58|cl-0      OpenCL Error: clEnqueueNDRangeKernel -52
+min/mean/max: 0/6649454/8394204 H/s
+inner mean: 8284355 H/s

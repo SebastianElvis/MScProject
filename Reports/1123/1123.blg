@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 1123.aux
+The style file: plain.bst
+Database file #1: references.bib.bib
+Warning--empty institution in percival2016scrypt
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            519 strings with 4579 characters,
+and the built_in function-call counts, 1169 in all, are:
+= -- 109
+> -- 67
+< -- 0
++ -- 28
+- -- 22
+* -- 76
+:= -- 216
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 23
+chr.to.int$ -- 0
+cite$ -- 5
+duplicate$ -- 41
+empty$ -- 81
+format.name$ -- 22
+if$ -- 229
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 25
+preamble$ -- 1
+purify$ -- 19
+quote$ -- 0
+skip$ -- 27
+stack$ -- 0
+substring$ -- 47
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 14
+warning$ -- 1
+while$ -- 10
+width$ -- 5
+write$ -- 43
+(There was 1 warning)

@@ -17,6 +17,39 @@ Runchao Han \\
 % Use the \item construct to list each item.  Try to keep the
 % descriptions for each down to one or two sentences
 %
+
+\section{Progress of the Last Week}
+
+\begin{enumerate}
+\item Searched state-of-the-art mining algorithms
+\item Understanded most of those mining algorithms
+\item Set up the programming environment of OpenCL/CUDA
+\item Downloaded their source code(most are C/C++) and ran them successfully(including their CUDA/OpenCL versions if exists). This includes:
+	\begin{enumerate}
+	\item \href{https://github.com/ethereum-mining/ethminer}{ethminer}(CUDA/OpenCL)
+	\item \href{https://github.com/tromp/cuckoo}{cuckoo}
+	\item \href{https://github.com/Tarsnap/scrypt}{scrypt}
+	\item \href{https://github.com/tsiv/ccminer-cryptonight}{cryptonight}
+	\end{enumerate}
+\item Made the initial decision of choosing mining algorithms
+\end{enumerate}
+
+\section{The Choice of Target Mining Algorithms}
+
+Currently I suggest to target at Ethash and Cuckoo, and maybe Scrypt. The reason of chooseing Ethash and Cuckoo are:
+
+\begin{enumerate}
+\item Parallelisable
+\item Widely adopted
+\item Current implementations are robust, especially the Ethash
+\end{enumerate}
+
+Scrypt is not parallelisable at present, but ASICs for scrypt have emerged. Currently scrypt is not adopted to be the exact PoW algorithm, but combined with other functions to form stronger algorithms, like Momentum.
+
+After the search of mining algorithms, most existing mining algorithms are memory-bound, except Bitcoin. This is because ASICs make the cryptocurrency decentralised. The consensus among cryptocurrency communities is that GPU mining is the de facto standard. Though lower hashrate is produced by purely GPU mining, the difficulty of mining a block is lower according to the hashrate of the whole network, which keeps the speed of finding a block is statistically constant(e.g. A block is mined in the Bitcoin network per 10 minutes). This will keep the mining profitable.
+
+State-of-the-art mining algorithms are all parallelisable to reach the memory bandwidth limit. Currently no mining machines with huge memory bandwidth are produced(maybe it's difficult).
+
 \section{Introduction}
 
 Currently Proof-of-Work (PoW) algorithm is the most popular consensus algorithm for public blockchains because of its scalability, where peers get coins by ``mining'' on the blockchain network. ``Mining'' in PoW based cryptocurrencies means to find hash values which satisfy the requirement to get the right to append a block on the blockchain. This report focuses on the first task of the MSc Project, which is to make a survey on state-of-the-art mining algorithms.
@@ -88,7 +121,7 @@ To avoid the centralisation, memory-bound and non-parallelisable algorithms are 
 
 \subsection{Scrypt}
 
-
+Scrypt\cite{scrypt} is a sequential memory-hard hash function adopted by Litecoin's PoW consensus. The original paper gave thorough definitions to the memory-hard algorithms and sequential memory-hard algorithms. It also introduces the $ROMix_{H}$ function class and the $SMix$ function class which are all sequential memory-hard based on the Random Oracle model\cite{canetti2004random}. Finally it proposed the $Scrypt$ algorithm which achieved the best performance.
 
 \subsection{Ethash Based on DAG Generation}
 
@@ -115,7 +148,7 @@ The basic thinking is to construct a random bipartite graph with randomly chosen
 
 \subsection{Momentum Based on Hash Birthday Collision}
 
-Momentum is a mining algorithm based on hash function's birthday collision, adopted by \href{hhttp://memorycoin.org/}{MemoryCoin}(bankrupted). Birthday collision means two known strings have the same hash value. 
+Momentum is a mining algorithm based on hash function's birthday collision, adopted by \href{hhttp://memorycoin.org/}{MemoryCoin}. Birthday collision means two known strings have the same hash value. 
 
 Assuming a cryptographically secure hashing function $Hash(x)$ and a sequential memory-hard hash function $BirthdayHash(x)$ like \texttt{scrypt} are defined. The algorithm can be described as follows:
 
@@ -128,6 +161,8 @@ Assuming a cryptographically secure hashing function $Hash(x)$ and a sequential 
 \subsection{MemoHash}
 
 Memohash\cite{memohash} is a memory-hard hash function, but not a PoW function. It gave concrete definitions of a memory-hard function, as well as proposed two sequential memory hard functions \texttt{SeqMemoHash} and \texttt{RandMemoHash}.
+Little information about this algorithm exists, so I haven't understood it very well yet.
+
 
 \section{Planned Accomplishments}
 \begin{enumerate}
@@ -144,22 +179,11 @@ Memohash\cite{memohash} is a memory-hard hash function, but not a PoW function. 
    \end{itemize}
 \end{enumerate}
 
-%
-% This section is used to list the unscheduled accomplishments of the week.
-% Use the \item construct to list each item.  Try to keep the
-% Descriptions for each down to one or two sentences
-%
-\section{Other Accomplishments}
-\begin{itemize}
-\item
-\item
-\end{itemize}
 
 \section{Miscellaneous}
 
 \begin{itemize}
 \item A \href{https://whattomine.com}{website} is found to check the hash rates of different cryptocurrencies with information about CPU/GPU/ASICs.
-\item 
 
 \end{itemize}
 
@@ -170,21 +194,13 @@ Memohash\cite{memohash} is a memory-hard hash function, but not a PoW function. 
 %
 \section{Next Week's Plan}
 \begin{itemize}
-\item
-\item
+\item Make a detailed illustration of chosen mining algorithms
+\item Read paper about optimising and parallelising algorithms
+\item Read source code of chosen algorithms
+\item Learn about GPU programming(OpenCL/CUDA)
 \end{itemize}
 
-%
-% This section is used to list any issues that were raised during
-% the week that are of special interest.  Also use this to voice
-% issues that the TA or Instructor must resolve.
-% Use the \item construct to list each item.  Try to keep the
-% Descriptions for each down to one or two sentences
-%
-\section{Issues}
-\begin{itemize}
-\item
-\item
-\end{itemize}
+\bibliographystyle{plain}
+\bibliography{1114.bib}
 
 \end{document}

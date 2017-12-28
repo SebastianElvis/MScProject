@@ -1,18 +1,18 @@
-\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Background of PoW}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Hash Functions}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{HashCash}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{PoW Consensus - Double SHA256 in Bitcoin as an Example}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Challenges of PoW - Centralisation of Computing Power}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Solutions}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{State-of-the-art Democrat PoW Algorithms}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{Scrypt}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Ethash Based on DAG Generation}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.3}{Cuckoo Based on Graph Theory}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.4}{Momentum Based on Hash Birthday Collision}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.5}{MemoHash}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Planned Accomplishments}{}% 14
-\BOOKMARK [1][-]{section.5}{Other Accomplishments}{}% 15
-\BOOKMARK [1][-]{section.6}{Miscellaneous}{}% 16
-\BOOKMARK [1][-]{section.7}{Next Week's Plan}{}% 17
-\BOOKMARK [1][-]{section.8}{Issues}{}% 18
+\BOOKMARK [1][-]{section.1}{Progress of the Last Week}{}% 1
+\BOOKMARK [1][-]{section.2}{The Choice of Target Mining Algorithms}{}% 2
+\BOOKMARK [1][-]{section.3}{Introduction}{}% 3
+\BOOKMARK [1][-]{section.4}{Background of PoW}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Hash Functions}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{HashCash}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{PoW Consensus - Double SHA256 in Bitcoin as an Example}{section.4}% 7
+\BOOKMARK [2][-]{subsection.4.4}{Challenges of PoW - Centralisation of Computing Power}{section.4}% 8
+\BOOKMARK [2][-]{subsection.4.5}{Solutions}{section.4}% 9
+\BOOKMARK [1][-]{section.5}{State-of-the-art Democrat PoW Algorithms}{}% 10
+\BOOKMARK [2][-]{subsection.5.1}{Scrypt}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.2}{Ethash Based on DAG Generation}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.3}{Cuckoo Based on Graph Theory}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.4}{Momentum Based on Hash Birthday Collision}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.5}{MemoHash}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Planned Accomplishments}{}% 16
+\BOOKMARK [1][-]{section.7}{Miscellaneous}{}% 17
+\BOOKMARK [1][-]{section.8}{Next Week's Plan}{}% 18

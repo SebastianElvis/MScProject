@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{bertoni2009keccak}
+Guido Bertoni, Joan Daemen, Micha{\"e}l Peeters, and Gilles Van~Assche.
+\newblock Keccak specifications.
+\newblock {\em Submission to NIST (Round 2)}, 2009.
+
+\bibitem{daemen2013design}
+Joan Daemen and Vincent Rijmen.
+\newblock {\em The design of Rijndael: AES-the advanced encryption standard}.
+\newblock Springer Science \& Business Media, 2013.
+
+\bibitem{percival2016scrypt}
+Colin Percival and Simon Josefsson.
+\newblock The scrypt password-based key derivation function.
+\newblock Technical report, 2016.
+
+\bibitem{rivest2006leak}
+Ronald~L Rivest, Adi Shamir, and Yael Tauman.
+\newblock How to leak a secret: Theory and applications of ring signatures.
+\newblock {\em Essays in memory of Shimon Even}, 3895:164--186, 2006.
+
+\end{thebibliography}
