@@ -127,7 +127,7 @@ Function type specifiers specify the execution place of a function, which are:
 \begin{itemize}
 \item $\_\_device\_\_$: The function is invoked and executed on GPU.
 \item $\_\_glocal\_\_$: The function is invoked by CPU and executed on GPU, so called ``Kernel function''.
-\item $\_\host\_\_$: The function is invoked and executed on CPU. This is the default option where the function is a traditional C function.
+\item $\_\_host\_\_$: The function is invoked and executed on CPU. This is the default option where the function is a traditional C function.
 \end{itemize}
 
 \subsubsection{Variable Type Specifiers}
@@ -154,14 +154,18 @@ Variable type specifiers specify the place of variable storage, which are:
 
 \subsection{The New Shuffle APIs}
 
+In the newest CUDA version 9.0, the Shuffle APIs are created. $\_\_shfl()$ is used for exchanging variables among threads in a warp. Compared to the conventional shared memory, Shuffle can do the same thing with the better efficiency. More information can be found at \footnote{https://people.maths.ox.ac.uk/gilesm/cuda/lecs/lec4.pdf}.
+
+Ethash is implemented by both ways: the shared memory and the Shuffle. I just have figured out CUDA basics so I only tested the Shuffle implementation.
+
 \section{A More Detailed Profiling on Ethash (Shuffled)}
 
+This time I did a detailed profiling, but still haven't figured out the implementation because of CUDA (Now it is much better). I uploaded my data and my Jupyter notebook to Github.\footnote{https://github.com/SebastianElvis/MScProject/tree/master/tests/Ethash\textunderscore tests}
+
+However I haven't draw a stack graph, because the data is still coarse grained and some parts take time much longer than other parts, making the graph hard to read.
 
 \section{Miscellaneous}
 
-\begin{itemize}
-\item 
-\end{itemize}
 %
 % This section is used to list the following week's plan
 % Use the \item construct to list each item.  Try to keep the
@@ -169,7 +173,8 @@ Variable type specifiers specify the place of variable storage, which are:
 %
 \section{Next Week's Plan}
 \begin{enumerate}
-\item 
+\item Figure out the Ethash code and comment on every line
+\item Output an analysis of the Ethash source code
 \end{enumerate}
 
 
