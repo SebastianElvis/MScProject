@@ -1,0 +1,11 @@
+\begin{thebibliography}{1}
+
+\bibitem{ryoo2008optimization}
+Shane Ryoo, Christopher~I Rodrigues, Sara~S Baghsorkhi, Sam~S Stone, David~B
+  Kirk, and Wen-mei~W Hwu.
+\newblock Optimization principles and application performance evaluation of a
+  multithreaded gpu using cuda.
+\newblock In {\em Proceedings of the 13th ACM SIGPLAN Symposium on Principles
+  and practice of parallel programming}, pages 73--82. ACM, 2008.
+
+\end{thebibliography}
